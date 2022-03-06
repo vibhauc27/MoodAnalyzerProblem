@@ -14,10 +14,10 @@ namespace MoodAnalyzerTestCase
             MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
             string expected = "sad";
 
-            ///Act
+            //Act
             string actual = mood.AnalyseMood();
 
-            ///Asert
+            //Asert
             Assert.AreEqual(expected, actual);
         }
 
@@ -29,10 +29,27 @@ namespace MoodAnalyzerTestCase
             MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
             string expected = "happy";
 
-            ///Act
+            //Act
             string actual = mood.AnalyseMood();
 
-            ///Asert
+            //Asert
+            Assert.AreEqual(expected, actual);
+        }
+
+        //Method to test happy message(UC2-TC2.1)
+        [TestMethod]
+        public void GivenNullMessageException()
+        {
+            
+            //Arange
+            string msg = null;
+            string expected = "happy";
+            MoodAnalyzerClass mood = new MoodAnalyzerClass(msg);
+
+            //Act
+            string actual = mood.AnalyseMood();
+
+            //Asert
             Assert.AreEqual(expected, actual);
         }
     }

@@ -20,11 +20,19 @@ namespace MoodAnalyzer
         //Method to analyse the mood from  the given message
         public string AnalyseMood()
         {
-            if (message.ToLower().Contains("sad"))
+            //Handling exception if user provide null value(UC2)
+            try
             {
-                return "sad";
+                if (message.ToLower().Contains("sad"))
+                {
+                    return "sad";
+                }
+                else
+                {
+                    return "happy";
+                }
             }
-            else
+            catch (NullReferenceException)
             {
                 return "happy";
             }
