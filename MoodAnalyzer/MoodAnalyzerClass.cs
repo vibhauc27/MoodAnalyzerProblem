@@ -5,11 +5,20 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MoodAnalyzer
-{
+{   
     public class MoodAnalyzerClass
-    {      
-        //Method to analyse the mood from the given message
-        public string AnalyseMood(string message)
+    {
+        //Declaring varibale
+        public string message;
+
+        //Constructor to initialize message 
+        public MoodAnalyzerClass(string message)
+        {
+            this.message = message;
+        }
+
+        //Method to analyse the mood from  the given message
+        public string AnalyseMood()
         {
             if (message.ToLower().Contains("sad"))
             {

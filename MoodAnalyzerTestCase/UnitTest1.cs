@@ -10,12 +10,27 @@ namespace MoodAnalyzerTestCase
         public void GivenSadMessage_ReturnSadMood()
         {
             //Arange
+            string msg = "I am in sad Mood";
+            MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
+            string expected = "sad";
+
+            ///Act
+            string actual = mood.AnalyseMood();
+
+            ///Asert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void GivenAnyMessage_ReturnHappyMood()
+        {
+            //Arange
             string msg = "I am in any Mood";
-            MoodAnalyzerClass mood = new MoodAnalyzerClass();
+            MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
             string expected = "happy";
 
             ///Act
-            string actual = mood.AnalyseMood(msg);
+            string actual = mood.AnalyseMood();
 
             ///Asert
             Assert.AreEqual(expected, actual);
