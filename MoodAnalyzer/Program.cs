@@ -10,7 +10,7 @@ namespace MoodAnalyzer
 
             //Calling the mood analyser object(UC1)
             MoodAnalyzerClass mood = new MoodAnalyzerClass();
-            string result = mood.AnalyseMood("I am in sad mood");
+            string result = mood.AnalyseMood("I am in any mood");
 
             Console.WriteLine("The mood is {0}", result);           
         }
