@@ -1,0 +1,15 @@
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\MoodAnalyzer.exe
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\MoodAnalyzer.deps.json
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\MoodAnalyzer.runtimeconfig.json
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\MoodAnalyzer.dll
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\ref\MoodAnalyzer.dll
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\bin\Debug\net6.0\MoodAnalyzer.pdb
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.csproj.AssemblyReference.cache
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.AssemblyInfoInputs.cache
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.AssemblyInfo.cs
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.csproj.CoreCompileInputs.cache
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.dll
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\ref\MoodAnalyzer.dll
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.pdb
+C:\Users\vindy\source\repos\MoodAnalyzer\MoodAnalyzer\obj\Debug\net6.0\MoodAnalyzer.genruntimeconfig.cache
