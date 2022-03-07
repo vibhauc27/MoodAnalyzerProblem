@@ -3,38 +3,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MoodAnalyzer.MoodAnalyzerCustomException;
 
 namespace MoodAnalyzer
 {   
     public class MoodAnalyzerClass
     {
-        //Declaring varibale
-        public string message;
-
-        //Constructor to initialize message 
-        public MoodAnalyzerClass(string message)
+        public string AnalyseMood(string moodMessage)
         {
-            this.message = message;
-        }
-
-        //Method to analyse the mood from  the given message
-        public string AnalyseMood()
-        {
-            //Handling exception if user provide null value(UC2)
             try
             {
-                if (message.ToLower().Contains("sad"))
+                if (moodMessage == null)
                 {
-                    return "sad";
+                    throw new MoodAnalyzerCustomException(ExceptionType.NULL_MESSAGE_EXCEPTION, "Null message passed");
+
+                }
+                if (moodMessage.Equals(string.Empty))
+                {
+                    throw new MoodAnalyzerCustomException(ExceptionType.EMPTY_MESSAGE_EXCEPTION, "Empty message passed");
+
+                }
+                if (moodMessage.ToLower().Contains("sad"))
+                {
+                    return "SAD";
+
                 }
                 else
                 {
-                    return "happy";
+                    return "HAPPY";
+
                 }
             }
-            catch (NullReferenceException)
+            catch (Exception ex)
             {
-                return "happy";
+                return ex.Message;
             }
         }
     }

@@ -6,7 +6,7 @@ namespace MoodAnalyzerTestCase
     [TestClass]
     public class UnitTest1
     {
-        [TestMethod]
+        /*[TestMethod]
         public void GivenSadMessage_ReturnSadMood()
         {
             //Arange
@@ -48,6 +48,22 @@ namespace MoodAnalyzerTestCase
 
             //Act
             string actual = mood.AnalyseMood();
+
+            //Asert
+            Assert.AreEqual(expected, actual);
+        }*/
+
+        [TestMethod]
+        public void GivenNullMood_ShouldReturn_NULL_MOOD_EXCEPTION()
+        {
+
+            //Arange
+            string moodMessage = null;
+            string expected = "Null message passed";
+            MoodAnalyzerClass mood = new MoodAnalyzerClass();
+
+            //Act
+            string actual = mood.AnalyseMood(moodMessage);
 
             //Asert
             Assert.AreEqual(expected, actual);

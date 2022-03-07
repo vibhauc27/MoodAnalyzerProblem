@@ -9,12 +9,18 @@ namespace MoodAnalyzer
     public class Program
     {       
         public static void Main(string[] args)
-        {            
-            Console.WriteLine("Welcome To Mood Analyser Program");
-
-            MoodAnalyzerClass mood = new MoodAnalyzerClass("I am in sad mood");
-            string result = mood.AnalyseMood();
-            Console.WriteLine("The mood is {0}", result);
+        {
+            try
+            {
+                string mood = Console.ReadLine();
+                MoodAnalyzerClass moodAnalyser = new MoodAnalyzerClass();
+                string result = moodAnalyser.AnalyseMood(mood);
+                Console.WriteLine(result);
+            }
+            catch (MoodAnalyzerCustomException m)
+            {
+                Console.WriteLine(m.Message);
+            }
         }
     }
 }
