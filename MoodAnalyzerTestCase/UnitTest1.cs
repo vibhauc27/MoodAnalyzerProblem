@@ -68,5 +68,21 @@ namespace MoodAnalyzerTestCase
             //Asert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void GivenEmptyMood_ShouldReturn_EMPTY_MOOD_EXCEPTION()
+        {
+
+            //Arange
+            string moodMessage = string.Empty;
+            string expected = "Empty message passed";
+            MoodAnalyzerClass mood = new MoodAnalyzerClass();
+
+            //Act
+            string actual = mood.AnalyseMood(moodMessage);
+
+            //Asert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
