@@ -6,16 +6,16 @@ namespace MoodAnalyzerTestCase
     [TestClass]
     public class UnitTest1
     {
-        /*[TestMethod]
+        [TestMethod]
         public void GivenSadMessage_ReturnSadMood()
         {
             //Arange
             string msg = "I am in sad Mood";
-            MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
+            MoodAnalyzerClass mood = new MoodAnalyzerClass();
             string expected = "sad";
 
             //Act
-            string actual = mood.AnalyseMood();
+            string actual = mood.AnalyseMood(msg);
 
             //Asert
             Assert.AreEqual(expected, actual);
@@ -26,11 +26,11 @@ namespace MoodAnalyzerTestCase
         {
             //Arange
             string msg = "I am in any Mood";
-            MoodAnalyzerClass mood = new MoodAnalyzerClass("msg");
+            MoodAnalyzerClass mood = new MoodAnalyzerClass();
             string expected = "happy";
 
             //Act
-            string actual = mood.AnalyseMood();
+            string actual = mood.AnalyseMood(msg);
 
             //Asert
             Assert.AreEqual(expected, actual);
@@ -44,14 +44,14 @@ namespace MoodAnalyzerTestCase
             //Arange
             string msg = null;
             string expected = "happy";
-            MoodAnalyzerClass mood = new MoodAnalyzerClass(msg);
+            MoodAnalyzerClass mood = new MoodAnalyzerClass();
 
             //Act
-            string actual = mood.AnalyseMood();
+            string actual = mood.AnalyseMood(msg);
 
             //Asert
             Assert.AreEqual(expected, actual);
-        }*/
+        }
 
         [TestMethod]
         public void GivenNullMood_ShouldReturn_NULL_MOOD_EXCEPTION()

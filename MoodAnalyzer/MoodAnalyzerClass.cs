@@ -34,9 +34,9 @@ namespace MoodAnalyzer
 
                 }
             }
-            catch (Exception ex)
+            catch (NullReferenceException)
             {
-                return ex.Message;
+                throw new MoodAnalyzerCustomException(MoodAnalyzerCustomException.ExceptionType.NULL_MESSAGE_EXCEPTION, "Message should not be null");
             }
         }
     }
