@@ -84,5 +84,21 @@ namespace MoodAnalyzerTestCase
             //Asert
             Assert.AreEqual(expected, actual);
         }
+
+
+        [TestMethod]
+        public void Given_MoodAnalyser_ClassName_Should_Return_MoodAnalyser_Object1()
+        {
+            //Arrange
+            string message = null;
+            object expected = new MoodAnalyzerClass(message); 
+            
+            //Act
+            object Obj = MoodAnalyserFactoryClass.CreateMoodAnalyserObject("MoodAnalyzer.MoodAnalyzerClass", "MoodAnalyzerClass");
+            
+            //Assert
+            expected.Equals(Obj);
+        }
+        
     }
 }
