@@ -93,7 +93,7 @@ namespace MoodAnalyzerTestCase
 
         //Method to test Mood analyzer object UC4 - TC 4.1
         [TestMethod]
-        public void Given_MoodAnalyser_ClassName_Should_Return_MoodAnalyser_Object1()
+        public void Given_MoodAnalyser_ClassName_Should_Return_MoodAnalyser_Object()
         {
             //Arrange
             string message = null;
@@ -106,6 +106,8 @@ namespace MoodAnalyzerTestCase
             expected.Equals(Obj);
         }
 
+        //TC-4.2
+
         [TestMethod]
         public void Given_Improper_Class_Name_Should_Throw_MoodAnalysisException_Indicating_No_Such_Class()
         {
@@ -114,6 +116,7 @@ namespace MoodAnalyzerTestCase
                 //Arrange
                 string className = "WrongNamespace.MoodAnalyser";
                 string constructorName = "MoodAnalyser";
+
                 //Act
                 object resultObj = MoodAnalyserFactoryClass.CreateMoodAnalyserObject(className, constructorName);
             }
@@ -121,6 +124,27 @@ namespace MoodAnalyzerTestCase
             {
                 //Assert
                 Assert.AreEqual("class not found", e.Message);
+            }
+        }
+
+        //TC-4.3
+
+        [TestMethod]
+        public void Given_Improper_Constructor_Name_Should_Throw_MoodAnalysisException_Indicating_No_Such_Constructor()
+        {
+            try
+            {
+                //Arrange
+                string className = "MoodAnalyzerProblem.MoodAnalyser";
+                string constructorName = "WrongConstructorName";
+
+                //Act
+                object resultObj = MoodAnalyserFactoryClass.CreateMoodAnalyserObject(className, constructorName);
+            }
+            catch (MoodAnalyzerCustomException e)
+            {
+                //Assert
+                Assert.AreEqual("constructor not found", e.Message);
             }
         }
 
