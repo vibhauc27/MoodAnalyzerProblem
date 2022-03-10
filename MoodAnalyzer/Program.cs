@@ -12,7 +12,7 @@ namespace MoodAnalyzer
         {
             try
             {
-                string mood = Console.ReadLine();
+                string mood = String.Empty;
                 MoodAnalyzerClass moodAnalyser = new MoodAnalyzerClass();
                 string result = moodAnalyser.AnalyseMood(mood);
                 Console.WriteLine(result);
